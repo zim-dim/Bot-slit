@@ -14,7 +14,15 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 def KMAD(update, context):
-    update.message.reply_text('a')
+    kb_start_kmad = [
+        [InlineKeyboardButton('Викладачі', callback_data = 'vikladachi')],
+        [InlineKeyboardButton('Відмінності кафедри', callback_data = 'vidminnosti_kafedri')],
+        [InlineKeyboardButton('Історія кафедри', callback_data = 'istoria_kafedri')],
+        [InlineKeyboardButton('Аудиторії кафедри', callback_data = 'auditorii_kafedri')],
+        [InlineKeyboardButton('Наші випускники', callback_data = 'nashi_vipuskniki')]
+    ]
+    reply = InlineKeyboardMarkup(kb_start_kmad)
+    update.message.reply_text('blah', reply_markup= reply)
 
 def importances(update, context):
     update.message.reply_text('b')

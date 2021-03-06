@@ -123,10 +123,12 @@ def moglyv_stud(update, context):
     """Send a message when the command /start is issued."""
     #update.callback_query.message.reply_text('У нас є багато цікавих можливостей для студентів. З чого почнемо? ')
     
-    kb_moglyv_stud = [[InlineKeyboardButton("Проєктне навчання",callback_data = "pn")],
-               [InlineKeyboardButton("Дуальна освіта",callback_data = "ds")],
-               [InlineKeyboardButton("Працевлаштування",callback_data = "pr")],
-               [InlineKeyboardButton("Практика",callback_data = "p")]]
+    kb_moglyv_stud = [[InlineKeyboardButton("Проєктне навчання",callback_data = "proekt_nav")],
+               [InlineKeyboardButton("Дуальна освіта",callback_data = "du_osvita")],
+               [InlineKeyboardButton("Працевлаштування",callback_data = "pracevl")],
+               [InlineKeyboardButton("Практика",callback_data = "prakt")]]
+    
+
     
     reply = InlineKeyboardMarkup(kb_moglyv_stud)
     
@@ -137,16 +139,16 @@ def opportunties_for_the_student(update, context):
     update.callback_query.message.reply_text()
 def conditions_of_entry(update, context):
     update.callback_query.message.reply_text()
-def pn(update, context):
+def proekt_nav(update, context):
     """Send a message when the command /start is issued."""
     update.callback_query.message.reply_text('Проєктне навчання ')
-def ds(update, context):
+def du_osvita(update, context):
     """Send a message when the command /start is issued."""
     update.callback_query.message.reply_text('Дуальна освіта ')
-def pr(update, context):
+def pracevl(update, context):
     """Send a message when the command /start is issued."""
     update.callback_query.message.reply_text('Працевлаштування ')
-def p(update, context):
+def prakt(update, context):
     """Send a message when the command /start is issued."""
     update.callback_query.message.reply_text('Практика ')
 def main():
@@ -159,10 +161,10 @@ def main():
     dp.add_handler(CallbackQueryHandler( kafedra_KMAD  , pattern = 'kafedra_KMAD'))
     dp.add_handler(CallbackQueryHandler( umovy_vstupu  , pattern = 'umovy_vstupu'))
     dp.add_handler(CallbackQueryHandler(moglyv_stud, pattern = 'moglyv_stud'))
-    dp.add_handler(CallbackQueryHandler(pn, pattern = 'pn'))
-    dp.add_handler(CallbackQueryHandler(ds, pattern = 'ds'))
-    dp.add_handler(CallbackQueryHandler(pr, pattern = 'pr'))
-    dp.add_handler(CallbackQueryHandler(p, pattern = 'p'))
+    dp.add_handler(CallbackQueryHandler(proekt_nav, pattern = 'proekt_nav'))
+    dp.add_handler(CallbackQueryHandler(du_osvita, pattern = 'du_osvita'))
+    dp.add_handler(CallbackQueryHandler(pracevl, pattern = 'pracevl'))
+    dp.add_handler(CallbackQueryHandler(prakt, pattern = 'prakt'))
         #umovy_vstupu
     dp.add_handler(CallbackQueryHandler(konk_pred_ZNO,
                                         pattern ='konk_pred_ZNO'))

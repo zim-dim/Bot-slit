@@ -47,6 +47,16 @@ def help(update, context):
 
 def error(update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
+    
+def umovy_vstupu(update, context):
+    kb_start = [
+                [InlineKeyboardButton('konk_pred_ZNO', callback_data = 'konk_pred_ZNO')],
+                [InlineKeyboardButton('pozp_konk_bal', callback_data = 'pozp_konk_bal')],
+                [InlineKeyboardButton('etap_vstup_komp', callback_data = 'etap_vstup_komp')],
+                [InlineKeyboardButton('kor_pos', callback_data = 'kor_pos')],
+                [InlineKeyboardButton('mt_budj_kont_mt_vstup', callback_data = 'mt_budj_kont_mt_vstup')],]
+    reply = InlineKeyboardMarkup(kb_start)
+    update.message.reply_text('Наши умови', reply_markup = reply)
 
     
 #UMOVY_VSTUPU ФУНКЦИИ
@@ -117,6 +127,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CallbackQueryHandler( kafedra_KMAD  , pattern = 'kafedra_KMAD'))
+    dp.add_handler(CallbackQueryHandler( umovy_vstupu  , pattern = 'umovy_vstupu'))
     
         #umovy_vstupu
     dp.add_handler(CallbackQueryHandler(konk_pred_ZNO,

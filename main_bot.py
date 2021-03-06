@@ -131,7 +131,12 @@ def moglyv_stud(update, context):
     reply = InlineKeyboardMarkup(kb_moglyv_stud)
     
     update.callback_query.message.reply_text('У нас є багато цікавих можливостей для студентів. З чого почнемо?', reply_markup = reply)
-    
+def about_of_CMAD_department(update, context):
+    update.callback_query.message.reply_text()
+def opportunties_for_the_student(update, context):
+    update.callback_query.message.reply_text()
+def conditions_of_entry(update, context):
+    update.callback_query.message.reply_text()
 def pn(update, context):
     """Send a message when the command /start is issued."""
     update.callback_query.message.reply_text('Проєктне навчання ')
@@ -169,7 +174,12 @@ def main():
                                         pattern ='kor_pos'))
     dp.add_handler(CallbackQueryHandler(mt_budj_kont_mt_vstup,
                                         pattern ='mt_budj_kont_mt_vstup'))
-
+    dp.add_handler(CallbackQueryHandler(about_of_CMAD_department,
+                                    pattern = 'about_of_CMAD_department'))
+    dp.add_handler(CallbackQueryHandler(opportunties_for_the_student,
+                                    pattern = 'opportunties_for_the_student'))
+    dp.add_handler(CallbackQueryHandler(conditions_of_entry,
+                                    pattern = 'conditions_of_entry'))
 
      #dfdua
 

@@ -119,6 +119,31 @@ def echo(update, context):
 def kafedra_KMAD(update, context):
     update.callback_query.message.reply_text(' про кафедру')
     
+def moglyv_stud(update, context):
+    """Send a message when the command /start is issued."""
+    #update.callback_query.message.reply_text('У нас є багато цікавих можливостей для студентів. З чого почнемо? ')
+    
+    kb_moglyv_stud = [[InlineKeyboardButton("Проєктне навчання",callback_data = "pn")],
+               [InlineKeyboardButton("Дуальна освіта",callback_data = "ds")],
+               [InlineKeyboardButton("Працевлаштування",callback_data = "pr")],
+               [InlineKeyboardButton("Практика",callback_data = "p")]]
+    
+    reply = InlineKeyboardMarkup(kb_moglyv_stud)
+    
+    update.callback_query.message.reply_text('У нас є багато цікавих можливостей для студентів. З чого почнемо?', reply_markup = reply)
+    
+def pn(update, context):
+    """Send a message when the command /start is issued."""
+    update.callback_query.message.reply_text('Проєктне навчання ')
+def ds(update, context):
+    """Send a message when the command /start is issued."""
+    update.callback_query.message.reply_text('Дуальна освіта ')
+def pr(update, context):
+    """Send a message when the command /start is issued."""
+    update.callback_query.message.reply_text('Працевлаштування ')
+def p(update, context):
+    """Send a message when the command /start is issued."""
+    update.callback_query.message.reply_text('Практика ')
 def main():
     updater = Updater("1612051672:AAHr1oAA9dLdABLUJKgZ7mX0lgYj1cULjSg", use_context=True)
 
@@ -128,7 +153,11 @@ def main():
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CallbackQueryHandler( kafedra_KMAD  , pattern = 'kafedra_KMAD'))
     dp.add_handler(CallbackQueryHandler( umovy_vstupu  , pattern = 'umovy_vstupu'))
-    
+    dp.add_handler(CallbackQueryHandler(moglyv_stud, pattern = 'moglyv_stud'))
+    dp.add_handler(CallbackQueryHandler(pn, pattern = 'pn'))
+    dp.add_handler(CallbackQueryHandler(ds, pattern = 'ds'))
+    dp.add_handler(CallbackQueryHandler(pr, pattern = 'pr'))
+    dp.add_handler(CallbackQueryHandler(p, pattern = 'p'))
         #umovy_vstupu
     dp.add_handler(CallbackQueryHandler(konk_pred_ZNO,
                                         pattern ='konk_pred_ZNO'))
@@ -140,6 +169,7 @@ def main():
                                         pattern ='kor_pos'))
     dp.add_handler(CallbackQueryHandler(mt_budj_kont_mt_vstup,
                                         pattern ='mt_budj_kont_mt_vstup'))
+
 
      #dfdua
 

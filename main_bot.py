@@ -13,7 +13,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-def KMAD(update, context):
+def kafedra_KMAD(update, context):
     kb_start_kmad = [
         [InlineKeyboardButton('Викладачі', callback_data = 'vikladachi')],
         [InlineKeyboardButton('Відмінності кафедри', callback_data = 'vidminnosti_kafedri')],

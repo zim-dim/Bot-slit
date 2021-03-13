@@ -77,32 +77,45 @@ def vykladach(update,context):
     update.callback_query.message.reply_text(content, parse_mode="Markdown")
 
 def vidmin_kaf(update,context):
-    update.callback_query.message.reply_text()
+    content = read_content_from_url('vidmin_kaf.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
 
 def hist_kaf(update,context):
-    update.callback_query.message.reply_text()
-
+    content = read_content_from_url('hist_kaf.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
+    
 def aud_kaf(update,context):
-    update.callback_query.message.reply_text()
+    content = read_content_from_url('aud_kaf.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
 
 def n_vypuskniki(update,context):
-    update.callback_query.message.reply_text()
+    content = read_content_from_url('n_vypuskniki.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
+    
 def prakt(update,context):
-    update.callback_query.message.reply_text()
+    content = read_content_from_url('prakt.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
+    
 #------------------ end KAFEDRA_KMAD ФУНКЦИИ----------------
 
 #----------------------------block umovy---------------------------
 def proekt_nav(update, context):
-    update.callback_query.message.reply_text('Проєктне навчання ')
+    content = read_content_from_url('proekt_nav.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
+    
     
 def du_osvita(update, context):
-    update.callback_query.message.reply_text('Дуальна освіта ')
+    content = read_content_from_url('du_osvita.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
+    
     
 def pracevl(update, context):
-    update.callback_query.message.reply_text('Працевлаштування ')
+    content = read_content_from_url('pracevl.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
     
 def prakt(update, context):
-    update.callback_query.message.reply_text('Практика ')
+    content = read_content_from_url('prakt.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
 
 #---------------------------- end block umovy---------------------------
 
@@ -114,19 +127,24 @@ def prakt(update, context):
 #UMOVY_VSTUPU ФУНКЦИИ
 
 def konk_pred_ZNO(update,context):
-    update.callback_query.message.reply_text()
+    content = read_content_from_url('konk_pred_ZNO.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
 
 def pozp_konk_bal(update,context):
-    update.callback_query.message.reply_text()
+    content = read_content_from_url('pozp_konk_bal.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
 
 def etap_vstup_komp(update,context):
-    update.callback_query.message.reply_text()
+    content = read_content_from_url('etap_vstup_komp.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
 
 def kor_pos(update,content):
-    update.callback_query.message.reply_text()
+    content = read_content_from_url('kor_pos.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
 
 def mt_budj_kont_mt_vstup(update,context):
-    update.callback_query.message.reply_text() 
+    content = read_content_from_url('mt_budj_kont_mt_vstup.txt')
+    update.callback_query.message.reply_text(content, parse_mode='Markdown')
 
 
 #EEEEEEEEEEEEEEEEEEEEEND......................

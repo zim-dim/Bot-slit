@@ -2,6 +2,8 @@ import logging
 import configparser
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Updater, CallbackQueryHandler, CommandHandler, MessageHandler, Filters
+import urllib.request
+LINK = 'https://ulkabo.github.io/bot-10-00/data/'
 '''
 TOK = None
 config = configparser.ConfigParser()
@@ -17,7 +19,11 @@ logger = logging.getLogger(__name__)
       
       ####
       
-
+def read_content_from_url(file):
+    url_file = LINK +file
+    f = urllib.request.urlopen(url_file)
+    text =f.read().decode(encoding = 'utf-8') # 'dggddfgdgdg\n\ndgdgdgdrgdfkdldglfksflkskdlgdfkgdlrgkjdr'
+    return text
 
 def start(update, context):
     update.message.reply_text('Starting...')
@@ -67,7 +73,7 @@ def umovy_vstupu(update, context):
 #------------------KAFEDRA_KMAD ФУНКЦИИ----------------
 
 def vykladach(update,context):
-    content = 
+    content = read_content_from_url('vykladach.txt')
     update.callback_query.message.reply_text(content, parse_mode="Markdown")
 
 def vidmin_kaf(update,context):

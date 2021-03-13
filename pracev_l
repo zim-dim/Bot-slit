@@ -1,4 +1,4 @@
-    dp.add_handler(CallbackQueryHandler(vykladach,
+     dp.add_handler(CallbackQueryHandler(vykladach,
                                         pattern ='Викладачі'))
 
     dp.add_handler(CallbackQueryHandler(vidmin_kaf,

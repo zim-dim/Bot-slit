@@ -158,7 +158,10 @@ def n_vypuskniki(update,context):
                                               Можна їх фото та імена побачити на сторінці кафедри. http://web.kpi.kharkov.ua/kmmm/uk/o_kafedre_ua/nashi-vipuskniki/ \
                                               Ми дуже пишаємось тим, що маємо зв’язок із кожним випускником. Постійно спілкуємось та обмінюємось новинами. \
                                               Приєднуйся і ти до нас!')
-
+def prakt(update,context):
+    update.callback_query.message.reply_text('Практики як такової немає\
+                                                Але за те що ти проводтшь ініціативні дії\
+                                                ти будеш нагороджений')
 
 
 

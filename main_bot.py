@@ -3,7 +3,7 @@ import configparser
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Updater, CallbackQueryHandler, CommandHandler, MessageHandler, Filters
 import urllib.request
-LINK = 'https://ulkabo.github.io/bot-10-00/data/'
+LINK = 'https://zim-dim.github.io/Bot-slit/data/'
 '''
 TOK = None
 config = configparser.ConfigParser()
@@ -186,7 +186,7 @@ def conditions(update, context):
 
     
 def main():
-    updater = Updater("1612051672:AAHr1oAA9dLdABLUJKgZ7mX0lgYj1cULjSg", use_context=True)
+    updater = Updater("1696273550:AAFRj9BxWQHbYrfXeyYNIZoZ1CLsZyCW2hQ", use_context=True)
 
     dp = updater.dispatcher
 

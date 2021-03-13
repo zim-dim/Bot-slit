@@ -67,7 +67,8 @@ def umovy_vstupu(update, context):
 #------------------KAFEDRA_KMAD ФУНКЦИИ----------------
 
 def vykladach(update,context):
-    update.callback_query.message.reply_text()
+    content = 
+    update.callback_query.message.reply_text(content, parse_mode="Markdown")
 
 def vidmin_kaf(update,context):
     update.callback_query.message.reply_text()

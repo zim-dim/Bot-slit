@@ -185,8 +185,7 @@ def conditions(update, context):
 
 
     
-def main():
-    updater = Updater("1696273550:AAFRj9BxWQHbYrfXeyYNIZoZ1CLsZyCW2hQ", use_context=True)
+def main():, use_context=True)
 
     dp = updater.dispatcher
 
